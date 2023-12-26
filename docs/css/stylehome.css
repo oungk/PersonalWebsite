@@ -96,31 +96,40 @@ header {
 
 
 .smaller-image {
-  width: 15%;             /* Set width to 50% of its container */
+  width: 20%;             /* Set width to 50% of its container */
   height: auto;           /* Maintain aspect ratio */
   padding-top: 40px;
+  padding-right: 80px;
 
 }
 
 .press-container {
-  background-color: #D6CCFF; /* You can change this color as per your preference */
-  padding: 20px; /* Add some padding to give space around the content */
-  margin-top: 20px; /* Add some margin to separate it from the main content */
-  text-align: left; /* Center-align the text inside the container */
+  display: flex;
+  flex-direction: row;
+  background-color: #D6CCFF;
+  padding: 100px;
+  margin-top: 20px;
+  max-width: 83%;
+  width: 100%;  /* Ensure it takes full width */
+  box-sizing: border-box;  /* Include padding and border in total width and height */
 }
 
-
-/* SET ANY MORE STYLES YOU WANT HERE: */
-.arrow-container {
-  position: fixed;
-  bottom: 190px; /* Adjust the bottom position as needed */
-  left: 50%;
-  transform: translateX(-50%);
+.heading {
+  flex: 1;                  /* Take up available space */
+  text-align: left;         /* Align text to the left */
+  margin-top: 50px;         /* Add top margin to move the text down */
 }
 
-.arrow-container img {
-  max-width: 90%; /* Ensure the arrow's width is responsive */
-  height: auto; /* Maintain the aspect ratio */
+.content {
+  flex: 3;                  /* Take up more space than the heading */
+  display: flex;            /* Use flexbox */
+  flex-direction: column;   /* Stack children vertically */
+  align-items: center;      /* Center content horizontally */
+  text-align: left;         /* Align text to the left */
+}
+
+.content p {
+  margin: 10px 0;           /* Add some vertical spacing between paragraphs */
 }
 
 .box-container {

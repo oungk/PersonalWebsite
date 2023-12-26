@@ -33,6 +33,11 @@ html {
     --gray: rgb(0, 0, 0, 0.1);
 }
 
+:root {
+    cursor: url('https://iili.io/JRYHqDF.png'), none; 
+}
+
+
 /*
     TYPOGRAPHY
 */
@@ -78,12 +83,12 @@ h3 { /* section header */
 
 h4 {
     /* Existing styles */
-    font-weight: 400;
+    font-weight: 300;
     font-size: 20px;
     color: black;
     line-height: 23px;
     text-align: right;
-    padding-left: 50px;
+    padding-left: 60px;
     padding-top: 40px;
     padding-bottom: 30px;
     position: relative; /* Add relative positioning to the h4 for absolute positioning of pseudo-elements */
@@ -110,18 +115,9 @@ h4::before {
 /* Bottom line */
 h4::after {
     bottom: -10px; /* Position it just below the text. Adjust this value as needed. */
+    font-weight: 200;
 }
 
-
-h5 { /* box head */
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 23px;
-    text-align: center;
-    font-size: bold;
-    color: #D6B464;
-
-}
 
 h6 { /* footer1*/
     font-weight: 400;
@@ -141,11 +137,11 @@ h7 { /* footer2 */
 
 }
 
-h8 { /* footer2 */
+h8 {
     font-family: 'Libre Baskerville', serif;
     font-weight: 500;
     font-size: 28px;
-    line-height: 18px;
+    line-height: 16px;
     text-align: center;
     color: black;
     font-style: italic;
@@ -160,20 +156,27 @@ h9 { /* navbar */
     top: 5.8px;
 }
 
-h10 { /* text box head */
-    font-weight: 700; /* Bold */
-    font-size: 16px;
-    line-height: 23px;
+h10 {  /*Subheadlines*/
+    font-family: 'Libre Baskerville', serif;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 16px;
     text-align: center;
-    color: #D6B464;
+    color: black;
+    font-style: italic;
+
 }
+
 
 p { /* body copy */
+    font-family: 'Roboto';
     font-size: 16px;
     line-height: 26px;
-    font-weight: 300;
+    font-weight: 300px
 
 }
+
+
 .bylines p { /* bylines */
     font-size: 14px;
     line-height: 1;
@@ -468,12 +471,12 @@ figcaption {
 */
 /* default link styles */
 a:link, a:visited {
-    color:#D6B464;
+    color:black;
     text-decoration: none;
-    border-bottom: 0.125em solid #D6B464;
+    border-bottom: 0.125em solid black;
 }
 a:hover, a:active {
-    color: #D6B464;
+    color: black;
     border-bottom: none;
 }
 /* navbar social icons */
@@ -483,18 +486,18 @@ nav li a:link, nav li a:visited {
     border-bottom: none;
 }
 nav li a:hover, nav li a:active {
-    color: #D6B464;
+    color: black;
     text-decoration: none;
     border-bottom: none;
 }
 /* byline links */
 .bylines a:link, .bylines a:active {
-    color: #D6B464;
+    color: black;
     text-decoration: none;
     border-bottom: none;
 }
 .bylines a:hover, .bylines a:visited {
-    color: #D6B464;
+    color: black;
     text-decoration: underline;
     border-bottom: none;
 }
