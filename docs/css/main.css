@@ -44,19 +44,18 @@ p {
 
 
 }
-h1, h2, h3, h11, .bylines p, footer p {
-    font-family: 'Libre Franklin', sans-serif;
-    font-weight: 850;
-}
-h1, h2, h11 {
+h1 {
+    font-family: 'Luxurious Script', cursive;;
+    font-weight: 500;
+    font-size: 400px;
+    line-height: 200px;
     text-align: center;
     margin: 0 auto;
     max-width: 80%;
     color: white;
-}
-h1, h11 { /* first headline */
-    padding: 35vh 0 0.75em;
-    font-size: 128px;
+    justify-content: center; /* Horizontally centers the content */
+    padding-top: 250px; /* Adjust the value as per your requirement */
+
 }
 
 
@@ -77,12 +76,42 @@ h3 { /* section header */
     font-size: bold;
 }
 
-h4 { /* subheadline */
+h4 {
+    /* Existing styles */
     font-weight: 400;
     font-size: 20px;
+    color: black;
     line-height: 23px;
-    text-align: center;
+    text-align: right;
+    padding-left: 50px;
+    padding-top: 40px;
+    padding-bottom: 30px;
+    position: relative; /* Add relative positioning to the h4 for absolute positioning of pseudo-elements */
+
+    /* Add padding to the lines using pseudo-elements */
+    padding-left: 10px; /* This adds left padding to the lines */
 }
+
+h4::before,
+h4::after {
+    content: ''; /* Required content property for pseudo-elements */
+    position: absolute; /* Position the lines relative to the h4 */
+    left: 10px; /* Adjust the left position based on the padding you've set */
+    right: 10px; /* Adjust the right position based on the padding you've set */
+    height: 1.5px; /* Thickness of the lines */
+    background-color: black; /* Color of the lines */
+}
+
+/* Top line */
+h4::before {
+    top: 10px; /* Position it at the top */
+}
+
+/* Bottom line */
+h4::after {
+    bottom: -10px; /* Position it just below the text. Adjust this value as needed. */
+}
+
 
 h5 { /* box head */
     font-weight: 700;
@@ -113,9 +142,9 @@ h7 { /* footer2 */
 }
 
 h8 { /* footer2 */
-    font-family: 'Georgia', serif;
-    font-weight: 700;
-    font-size: 20px;
+    font-family: 'Libre Baskerville', serif;
+    font-weight: 500;
+    font-size: 28px;
     line-height: 18px;
     text-align: center;
     color: black;
@@ -124,6 +153,7 @@ h8 { /* footer2 */
 }
 
 h9 { /* navbar */
+    font-family: 'Roboto';
     font-weight: 400;
     font-size: 18px;
     line-height: 18px;
@@ -180,6 +210,9 @@ footer {
     text-align: center;
 }
 
+body {
+    cursor: url('https://iili.io/JR7Qaol.png'), auto;
+}
 
 /* 
     HEADER

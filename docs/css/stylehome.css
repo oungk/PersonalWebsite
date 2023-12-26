@@ -43,7 +43,7 @@
     --idsred: #990000;
 
     body {
-        background-color: #D6B464;
+        background-color: #BCD5F8;
     }
 
 }
@@ -53,7 +53,7 @@
 header {
     /* add header image below */
     /* can use a file path before the photo is uploaded to ceo */
-    background: url('https://iili.io/JAaBKSS.jpg" alt="JAY4ZPV.jpg'); 
+    background: url('https://iili.io/JR7sLIR.jpg'); 
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center; /* adjusts image placement, can also be set as percentages */
@@ -74,6 +74,39 @@ header {
         Cool typography (from W+P): http://specials.idsnews.com/a-little-less-than-kind-iu-theater-bloomington/index.html
         Not full width header: http://specials.idsnews.com/how-iu-does-its-laundry/
     */
+}
+
+/*INTRO BOX*/
+/* Ensure the container uses Flexbox and items are in a row */
+.image-text-container {
+  display: flex;           /* Use flexbox for layout */
+  align-items: center;     /* Center items vertically */
+}
+
+/* CSS rule for the right alignment of text */
+.right-align-text {
+  text-align: left;
+  margin-left: 10px;      /* Add some spacing between the image and text */
+}
+
+.text-container {
+  border: 1.5px solid #000; /* Add a border around the text container */
+  padding: 20px; /* Add some padding inside the border */
+}
+
+
+.smaller-image {
+  width: 15%;             /* Set width to 50% of its container */
+  height: auto;           /* Maintain aspect ratio */
+  padding-top: 40px;
+
+}
+
+.press-container {
+  background-color: #D6CCFF; /* You can change this color as per your preference */
+  padding: 20px; /* Add some padding to give space around the content */
+  margin-top: 20px; /* Add some margin to separate it from the main content */
+  text-align: left; /* Center-align the text inside the container */
 }
 
 

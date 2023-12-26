@@ -7,20 +7,24 @@
     
     <!-- Title -->
     <!-- TO DO change to your title -->
-    <title onclick="location.href='index.html';">Class of 2027 Freshman Survey | The Vanderbilt Hustler</title>
+    <title onclick="location.href='index.html';">Katherine Oung Personal Website</title>
 
     <!-- favicon -->
-    <link rel="SHORTCUT ICON" href="https://iili.io/JAYjzEG.png">
+    <link rel="SHORTCUT ICON" href="https://iili.io/JR7idas.png">
 
     <!-- CSS stylesheets -->
     <link rel="stylesheet" href="css/normalize.css"> <!-- normalize — removes default browser styles -->
     <!-- see how bootstrap works: https://getbootstrap.com/docs/5.1/getting-started/introduction/ -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> <!-- Bootstrap — for aligning text columns -->
-    <link rel="stylesheet" href="css/ids.css"> <!-- IDS stylesheet — default IDS styles -->
+    <link rel="stylesheet" href="css/main.css"> <!-- IDS stylesheet — default IDS styles -->
     <link rel="stylesheet" href="css/stylehome.css"> <!-- Local stylesheet — put all your design choices here -->
 
     <!-- Font Awesome — for the social media icons and hamburger menu icon -->
     <script src="https://kit.fontawesome.com/ea52966d59.js" crossorigin="anonymous"></script>    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Luxurious+Script&family=Roboto&display=swap" rel="stylesheet">
+
 
     <!-- TO DO: SOCIAL CARDS — editors will help you with this, don't worry about it for now -->
     <!-- BUT DONT FORGET ABOUT IT or your dom image won't show up on social media/texting -->
@@ -42,7 +46,7 @@
 
 
 </head>
-<body>
+<body class="custom-cursor">
     <!-- Google Tag Manager -->
     <!-- (also don't have to worry about this at all) -->
     <noscript>
@@ -63,27 +67,33 @@
     <nav>
         <ul>
             <li class="logo">
-                <a href="https://www.vanderbilthustler.com">
-                    <img src="https://iili.io/JAYjzEG.png" alt="JAYjzEG.png" border="0">
-                </a>
-                <a href="index.html" id="surveyLink"><h8>| Class of 2027 Freshman Survey</h8></a>
+                    <img src="https://iili.io/JR7idas.png" alt="JAYjzEG.png" border="0">
+                <a href="index.html" id="surveyLink"><h8>  Katherine Oung</h8></a>
             </li>
             <li class="toggle">
                 <i class="fas fa-bars fa-lg"></i>
             </li>
-            <li class="item dropdown">
-                <div class="dropdown-content">
-                <a href="demographics.html"><h9>DEMOGRAPHICS</h9></a>
-                <a href="high-school.html"><h9>HIGH SCHOOL</h9></a>
-                <a href="admissions.html"><h9>ADMISSIONS</h9></a>
-                <a href="college-life.html"><h9>COLLEGE LIFE</h9></a>
-                <a href="politics.html"><h9>POLITICS</h9></a>
-                <a href="lifestyle.html"><h9>LIFESTYLE</h9></a>
-                </div>
+            <li class="item">
+                <a href="methodology.html">
+                    <h9 id="aboutLabel"> JOURNALISM&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </h9>
+                </a>
+            <li class="item">
+                <a href="methodology.html">
+                    <h9 id="aboutLabel"> CODING&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </h9>
+                </a>
+            <li class="item">
+                <a href="methodology.html">
+                    <h9 id="aboutLabel"> ACADEMIA&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </h9>
+                </a>
             </li>
             <li class="item">
                 <a href="methodology.html">
-                    <h9 id="aboutLabel"> ABOUT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </h9>
+                    <h9 id="aboutLabel"> DESIGN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </h9>
+                </a>
+            </li>
+            <li class="item">
+                <a href="methodology.html">
+                    <h9 id="aboutLabel"> FUN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </h9>
                 </a>
             </li>
         </ul>
@@ -112,57 +122,35 @@
         <!-- Headline, subhed -->
         <!-- feel free to change this up — you don't need it to have data scroll speed, 
         doesn't have to be centered, doesn't have to be 2 lines, etc. (see header options in css directions for more inspo) -->
-        <h1 data-scroll-speed="2">CLASS OF 2027</h1>
-        <h2 data-scroll-speed="3">The Freshman Survey</h2>
+        <h1 data-scroll-speed="2">Katherine<br>Oung</h1>
 
     </header> 
 
     <!-- main article -->
     <main class="container">
         <div class="row justify-content-center">
-            <div class="col-md-8 story">
-                <hr style="border: 1.5px solid #000; margin-top: 60px;">
-                <h4>What are Vanderbilt’s newest class’ average SAT and ACT scores? What is their average household income? Which Commons House do they wish they lived in? All your questions about the Class of 2027, answered.</h4>
-                <hr style="border: 1.5px solid #000;">
-                <section class="box-container">
-                        <div class="box" onclick="location.href='demographics.html';">
-                          <h5>DEMOGRAPHICS</h5>
-                        </div>
-                      
-                        <div class="box" onclick="location.href='high-school.html';">
-                          <h5>HIGH SCHOOL</h5>
-                        </div>
-                      
-                        <div class="box" onclick="location.href='admissions.html';">
-                          <h5>ADMISSIONS</h5>
-                        </div>
-                      
-                        <div class="box" onclick="location.href='college-life.html';">
-                          <h5>COLLEGE LIFE</h5>
-                        </div>
-                      
-                        <div class="box" onclick="location.href='politics.html';">
-                          <h5>POLITICS</h5>
-                        </div>
-                      
-                        <div class="box" onclick="location.href='lifestyle.html';">
-                          <h5>LIFESTYLE</h5>
-                        </div>
-                      </section>
-            </section>
-        </article>
-        
+            <div class="col-md-12 story">    
+                <!-- Container to hold image and text -->
+                <div class="image-text-container">
+                    <!-- Image with the specified path -->
+                    <img class="smaller-image" src="https://iili.io/JR7tAQ4.png" alt="Description of the image">
+    
+                    <!-- Text with the class name for right alignment -->
+                    <h4 class="right-align-text">
+                        Katherine Oung 翁乐乐 (they/them) is a John Seigenthaler Scholar at Vanderbilt University studying Computer Science, Political Science, and Data Science. As a journalist, they have reported on topics such as the environment, race, education, and gun violence. Additionally, they have worked on various graphic design and creative writing projects. They enjoy eating dim sum, reading poetry, and coding all variety of things. They hope you have a wonderful day ✰.
+                    </h4>
+                </div>
+                </div>
+        </div>
     </main>
+    
+    <div class="press-container">
+        <p>This is a container with a background color. You can put text or other content inside it.</p>
+    </div>
+</main>
 
     <footer>
         <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-md-3 text-center"> <!-- Center the content in the column -->
-                    <a href="https://www.vanderbilthustler.com">
-                        <img src="https://iili.io/JAYjzEG.png" alt="JAYjzEG.png" class="footer-logo">
-                    </a>
-                </div>
-            </div>
             <div class="row justify-content-center">
                 <div class="col-md-6 text-center"> <!-- Center the content in the column -->
                     <h6>Project Director | KATHERINE OUNG</h6>
