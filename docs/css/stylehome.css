@@ -99,33 +99,37 @@ header {
   width: 20%;             /* Set width to 50% of its container */
   height: auto;           /* Maintain aspect ratio */
   padding-top: 40px;
+  padding-bottom: 40px;
   padding-right: 80px;
 
 }
 
 .press-container {
   display: flex;
-  flex-direction: row;
-  background-color: #D6CCFF;
-  padding: 100px;
-  margin-top: 20px;
-  max-width: 83%;
-  width: 100%;  /* Ensure it takes full width */
-  box-sizing: border-box;  /* Include padding and border in total width and height */
+  flex-direction: row; /* Change to row so the items are side-by-side */
+  justify-content: center; /* align items vertically center */
+  align-items: center;     /* align items horizontally center */
+  background-color: lavender;
+  padding: 100px;       /* Add some padding for spacing */
 }
 
 .heading {
-  flex: 1;                  /* Take up available space */
-  text-align: left;         /* Align text to the left */
+  margin-bottom: 20px;     /* Add some space between heading and content */
+  margin-left: 20px;     /* Add some space between heading and content */
+  flex: 2;                  /* Take up available space */
+  text-align: center;         /* Align text to the left */
   margin-top: 50px;         /* Add top margin to move the text down */
+  width: 83%
 }
 
 .content {
-  flex: 3;                  /* Take up more space than the heading */
+  flex: 2;                  /* Take up more space than the heading */
   display: flex;            /* Use flexbox */
-  flex-direction: column;   /* Stack children vertically */
+  flex-direction: row;   /* Stack children vertically */
   align-items: center;      /* Center content horizontally */
   text-align: left;         /* Align text to the left */
+  width: 70%;                /* Width for content to control its size */
+  margin-right: 50px;       /* Add margin to the right to move it slightly to the left */
 }
 
 .content p {
@@ -189,6 +193,8 @@ header {
 }
 
 footer .col-md-3 {
+  margin-top: 0;            /* Remove top margin if any */
+  padding-top: 0;           /* Remove top padding if any */
   margin-bottom: 20px; /* Adjust the value for the desired space */
 }
 

@@ -33,10 +33,9 @@ html {
     --gray: rgb(0, 0, 0, 0.1);
 }
 
-:root {
-    cursor: url('https://iili.io/JRYHqDF.png'), none; 
+body {
+    cursor: url('https://iili.io/JRGAgWB.png'), pointer;
 }
-
 
 /*
     TYPOGRAPHY
@@ -508,7 +507,6 @@ nav li a:hover, nav li a:active {
 footer {
     background-color: var(--footer);
     padding: 30px 0 15px;
-    margin-top: 3.0em;
 }
 
 /* 
