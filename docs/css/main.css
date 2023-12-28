@@ -65,13 +65,16 @@ h1 {
 
 h2 { /* second headline */
     padding: 20vh 0 0.75em;
-    font-family: 'Georgia', serif;
-    font-size: 45px;
+    font-family: 'Libre Baskerville', serif;
+    font-size: 150px;
     font-weight: 700;
     font-style: italic;
-    margin-top: -2.2em; /* Adjust the value to move the text up */
-    line-height: 1; /* Reduce line height to bring the text up */
-    padding: 0; /* Reset padding to remove any extra space */
+    margin: 0 auto;
+    text-align: center;
+    justify-content: center; /* Horizontally centers the content */
+    padding-top: 250px; /* Adjust the value as per your requirement */
+    padding-bottom: 25px;
+    color: white;
 }
 h3 { /* section header */
     font-size: 28px;
@@ -102,7 +105,7 @@ h4::after {
     position: absolute; /* Position the lines relative to the h4 */
     left: 10px; /* Adjust the left position based on the padding you've set */
     right: 10px; /* Adjust the right position based on the padding you've set */
-    height: 1.5px; /* Thickness of the lines */
+    height: 2px; /* Thickness of the lines */
     background-color: black; /* Color of the lines */
 }
 
@@ -114,9 +117,18 @@ h4::before {
 /* Bottom line */
 h4::after {
     bottom: -10px; /* Position it just below the text. Adjust this value as needed. */
-    font-weight: 200;
 }
 
+h5 {
+    /* Existing styles */
+    font-weight: 300;
+    font-size: 20px;
+    color: white;
+    line-height: 40px;
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 30px;
+}
 
 h6 { /* footer1*/
     font-weight: 400;
@@ -140,11 +152,23 @@ h8 {
     font-family: 'Libre Baskerville', serif;
     font-weight: 500;
     font-size: 28px;
-    line-height: 16px;
+    line-height: 5px;
     text-align: center;
     color: black;
     font-style: italic;
 
+}
+
+
+h5 {
+    /* Existing styles */
+    font-weight: 300;
+    font-size: 20px;
+    color: white;
+    line-height: 23px;
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 30px;
 }
 
 h9 { /* navbar */
@@ -166,11 +190,29 @@ h10 {  /*Subheadlines*/
 
 }
 
+h11 {
+    font-family: 'Libre Baskerville', serif;
+    font-weight: 500;
+    font-size: 60px;
+    text-align: left;
+    font-style: bold;
+    color: black;
+    margin-bottom: 80px !important; /* Increased margin-bottom for more space */
+}
+
+h12 {
+    font-weight: 300;
+    font-size: 20px;
+    color: black;
+    line-height: 23px;
+    text-align: left;
+    margin-top: 80px !important; /* Increased margin-top for more space */
+    margin-bottom: 20px !important;
+}
 
 p { /* body copy */
     font-family: 'Roboto';
     font-size: 16px;
-    line-height: 26px;
     font-weight: 300px
 
 }
@@ -204,6 +246,7 @@ footer {
     font-size: 16px;
     line-height: 26px;
     font-weight: 300;
+    text-align: center;
 }
 .section-break { /* three asterisks */
     padding-top: 15px;
@@ -261,7 +304,7 @@ nav ul {
 li.logo p {
     display: inline; /* Display the text inline with the logo */
     margin-left: 10px; /* Adjust the spacing as needed */
-    margin-top: 5px; /* Adjust the margin-top to move the text down */
+    margin-top: 10px; /* Adjust the margin-top to move the text down */
 
 }
 
@@ -277,6 +320,8 @@ li.logo {
 li.logo img {
     width: 50px;
     padding-right: 5px;
+    margin-top: -7px;
+
 }
 li.logo span {
     display: none;
@@ -285,7 +330,7 @@ li.logo span {
 }
 li.item {
     font-size: 18px;
-    text-align: left;
+    text-align: center;
 }
 li.item a {
     margin-top: 0em; /* Adjust this value to move the "ABOUT" text up */
@@ -469,6 +514,19 @@ figcaption {
     LINKS
 */
 /* default link styles */
+footer a:link,
+footer a:visited {
+    color: black;
+    text-decoration: none;
+    border-bottom: none;
+}
+
+footer a:hover,
+footer a:active {
+    color: black;
+    border-bottom: none;
+}
+
 a:link, a:visited {
     color:black;
     text-decoration: none;
@@ -478,6 +536,8 @@ a:hover, a:active {
     color: black;
     border-bottom: none;
 }
+
+
 /* navbar social icons */
 nav li a:link, nav li a:visited {
     color: black;
@@ -505,9 +565,28 @@ nav li a:hover, nav li a:active {
     FOOTER
 */
 footer {
-    background-color: var(--footer);
+    background-color: var(--footer);  /* Use CSS variable for background color if defined elsewhere */
     padding: 30px 0 15px;
+    text-align: center;  /* Center-align text within the footer */
+    padding-top: 50px;
+    padding-bottom: 40px;
 }
+
+/* Remove bullet and underline from list items */
+.item {
+    list-style-type: none;  /* Remove bullet from the li */
+}
+
+/* Remove underline from anchor tags inside .item */
+.item a {
+    text-decoration: none;  /* Remove underline from the anchor tags */
+}
+
+/* Remove underline on hover as well */
+.item a:hover {
+    text-decoration: none;  /* Remove underline on hover */
+}
+
 
 /* 
     ADVERTISEMENTS

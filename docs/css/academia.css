@@ -43,18 +43,20 @@
   --idsred: #990000;
 
   body {
-      background-color: ;
+      background-color: #BCD5F8;
   }
 
 }
+
+
+
 header {
   /* add header image below */
   /* can use a file path before the photo is uploaded to ceo */
-  background: url("https://iili.io/JAEEELF.jpg"); 
+  background: url('https://iili.io/JR7sLIR.jpg'); 
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center top; /* adjusts image placement, can also be set as percentages */
-
+  background-position: center center; /* adjusts image placement, can also be set as percentages */
 
   /* note: there are many alternative ways to style the header
       other than a photo and 2 headlines. 
@@ -74,46 +76,93 @@ header {
   */
 }
 
-/* SET ANY MORE STYLES YOU WANT HERE: */
+/*INTRO BOX*/
+/* Ensure the container uses Flexbox and items are in a row */
+.image-text-container {
+display: flex;           /* Use flexbox for layout */
+align-items: center;     /* Center items vertically */
+}
 
-.box-container {
+/* CSS rule for the right alignment of text */
+.right-align-text {
+text-align: left;
+margin-left: 10px;      /* Add some spacing between the image and text */
+}
+
+.text-container {
+border: 1.5px solid #000; /* Add a border around the text container */
+padding: 20px; /* Add some padding inside the border */
+}
+
+
+.smaller-image {
+width: 20%;             /* Set width to 50% of its container */
+height: auto;           /* Maintain aspect ratio */
+padding-top: 40px;
+padding-bottom: 40px;
+padding-right: 80px;
+
+}
+
+.press-container {
 display: flex;
-flex-wrap: wrap;
-justify-content: center;
+flex-direction: row; /* Change to row so the items are side-by-side */
+justify-content: center; /* align items vertically center */
+align-items: center;     /* align items horizontally center */
+background-color: lavender;
+padding: 100px;       /* Add some padding for spacing */
+}
+
+.heading {
+margin-bottom: 20px;     /* Add some space between heading and content */
+margin-left: 20px;     /* Add some space between heading and content */
+flex: 2;                  /* Take up available space */
+text-align: center;         /* Align text to the left */
+margin-top: 50px;         /* Add top margin to move the text down */
+width: 83%
+}
+
+.content {
+flex: 2;                  /* Take up more space than the heading */
+display: flex;            /* Use flexbox */
+flex-direction: row;   /* Stack children vertically */
+align-items: center;      /* Center content horizontally */
+text-align: left;         /* Align text to the left */
+width: 70%;                /* Width for content to control its size */
+margin-right: 50px;       /* Add margin to the right to move it slightly to the left */
+}
+
+.content p {
+margin: 10px 0;           /* Add some vertical spacing between paragraphs */
+}
+
+.container {
+  max-width: 100%;  /* Set a maximum width */
+  margin-left: auto;  /* Auto margin on left and right to center it */
+  margin-right: auto;
+  padding-left: 15px; /* Add some padding on the left and right */
+  padding-right: 15px;
+  padding-top: 50px;
+  margin-top: 75px;
+  margin-bottom: 75px;
 }
 
 .box {
-width: auto;
+width: 30%;
 margin: 10px;
-padding-top: 7px;
-padding-left: 20px;
-padding-right: 20px;
+padding: 7px;
 background-color: #8E6600;
 border: 4px solid #000000;
 text-align: center;
+padding-top: 10px;
 cursor: pointer;
 transition: background-color 0.3s;
+overflow-wrap: break-word; /* Alternative property for better word wrap */
 }
 
 .box:hover {
 background-color: #F2EEE3;
 }
-
-.graph-container {
-text-align: center;
-}
-
-.graph-container {
-width: 100%; /* Take the full width */
-max-width: 800px; /* Set your desired max-width */
-margin: 0 auto;   /* Center the container */
-}
-
-.active {
-background-color: #8E6600;
-color: #F2EEE3; /* You might want to change the text color for better visibility */
-}
-
 
 .footer-logo {
 max-width: 20%; /* Ensure the image doesn't exceed its container */
@@ -128,7 +177,69 @@ padding-top: 4px;
 padding-bottom: 8px;
 }
 
+/* Slideshow */
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  padding-top: 70px;
+  max-width: 1000px;
+  margin: auto;
+  z-index: 1; /* Set a z-index value */
+  position: relative; /* Position the container */
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: lavender;
+  font-weight: bold;
+  font-size: 18px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  background-color: lavender; /* Set the default background color */
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: lavender;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  padding-top: 75px;
+  color: lavender;
+  font-size: 12px;
+  padding-left: 8px;
+  position: absolute;
+  top: 0;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
 footer .col-md-3 {
+margin-top: 0;            /* Remove top margin if any */
+padding-top: 0;           /* Remove top padding if any */
 margin-bottom: 20px; /* Adjust the value for the desired space */
 }
 
@@ -139,25 +250,37 @@ margin-bottom: 20px; /* Adjust the value for the desired space */
 No media query for `xs` since this is the default */
 
 /* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) { 
+/*@media (min-width: 576px) { 
   
+} */
+
+@media (max-width: 1000px) {
+header {
+  background: url('https://iili.io/JAQZh2s.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
 }
 
 /* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) {
+/*@media (min-width: 768px) {
   header {
       /* adjust header image positioning for larger devices if needed */
       /* you can also change the header image for mobile here */
-      /* background-position: 50% 50%; */
-  }
+      /* background-position: 50% 50%; 
+  } 
 }
+*/
+
 
 /* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) {
+/*@media (min-width: 992px) {
 
 }
 
 /* Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {
+/*@media (min-width: 1200px) {
 
 }
+*/
